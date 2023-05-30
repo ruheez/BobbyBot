@@ -11,14 +11,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Auto_Tor_IP_changer
+      - name: Set up Tor SOCKS proxy
         run: |
-          sudo apt-get update
-          sudo apt-get install -y tor
-          sudo pip3 install requests[socks]
-          git clone https://github.com/FDX100/Auto_Tor_IP_changer.git
-          cd Auto_Tor_IP_changer
-          python3 install.py
+         curl -sSLO https://raw.githubusercontent.com/dperson/torproxy/master/torproxy.sh
+         chmod +x torproxy.sh
+         ./torproxy.sh -l 9050 -i "0.0.0.0" &
+
 
       - name: Generate traffic
         run: |
