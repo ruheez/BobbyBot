@@ -2,7 +2,7 @@ name: VIP#2
 
 on:
   schedule:
-      - cron:  "*/2 * * * *"
+      - cron:  "*/1 * * * *"
 
 jobs:
   gen-traffic:
