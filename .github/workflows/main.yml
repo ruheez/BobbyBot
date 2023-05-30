@@ -1,5 +1,5 @@
 
-name: gen-traffic
+name: VIP TOR AUTO 
 
 on:
   schedule:
@@ -25,7 +25,7 @@ jobs:
         run: |
           cd Auto_Tor_IP_changer
           aut time # Change IP address
-          aut 10000000 # Specify the number of times to change IP
+          aut 10000 # Specify the number of times to change IP
 
           while true; do
             N=$(shuf -i 1-100 -n 1)
