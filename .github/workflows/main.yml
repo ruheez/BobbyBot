@@ -1,8 +1,9 @@
-name: VIP#2
+name: Tor VIP Clicker
 
 on:
   schedule:
-      - cron:  "*/1 * * * *"
+    - cron: "*/1 * * * *"
+
 
 jobs:
   gen-traffic:
